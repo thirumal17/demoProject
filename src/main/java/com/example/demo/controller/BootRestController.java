@@ -71,6 +71,7 @@ public class BootRestController {
 	public ResponseEntity<Users> createUser(@Valid @RequestBody Users user) {
 		
 		userlist.add(user);
+		bootsvc.saveUser(user);
 		return new ResponseEntity<Users>(user, HttpStatus.CREATED);
 
 	}
@@ -78,7 +79,7 @@ public class BootRestController {
 	@GetMapping(value = "/getall", produces = "application/json")
 	public List<Users> getall() {
 		
-		return userlist;
+		return bootsvc.usersfromRepo();
 
 	}
 }

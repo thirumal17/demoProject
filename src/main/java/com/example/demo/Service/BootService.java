@@ -23,4 +23,15 @@ UserRepo userrepo;
 		return userlist;
 		
 	}
+	public List<Users>  usersfromRepo(){
+		
+		
+		
+		return userrepo.findAll();
+		
+	}
+	public void saveUser(Users u) {
+		userrepo.save(u);
+	}
+	
 }
