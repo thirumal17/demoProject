@@ -57,7 +57,7 @@ public class BootRestController {
 		Users u = null;
 		for (Users u1 : userlist) {
 			if (id == u1.getId()) {
-				System.out.println(u1);
+				System.out.println("users entity"+u1);
 				u = u1;
 			}
 
